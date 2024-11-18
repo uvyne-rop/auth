@@ -1,0 +1,56 @@
+{
+  "signup": [
+    {
+      "id": "1",
+      "username": "uvyne",
+      "password": "1234"
+    },
+    {
+      "id": "e453",
+      "username": "uvyne",
+      "password": "123"
+    },
+    {
+      "id": "3c5b",
+      "username": "uvyne",
+      "password": "123"
+    },
+    {
+      "id": "103c",
+      "username": "uvyne",
+      "password": "123"
+    },
+    {
+      "id": "3048",
+      "username": "uvyne",
+      "password": "123"
+    },
+    {
+      "id": "d871",
+      "username": "uvyne",
+      "password": "123"
+    },
+    {
+      "id": "7e5e",
+      "username": "uvyne",
+      "password": "123"
+    },
+    {
+      "id": "f07a",
+      "username": "uvyne",
+      "password": "123"
+    },
+    {
+      "id": "ca8a",
+      "username": "uvyne",
+      "password": "123"
+    }
+  ],
+  "login": [
+    {
+      "id": "1",
+      "username": "uvyne",
+      "status": "successful"
+    }
+  ]
+}
