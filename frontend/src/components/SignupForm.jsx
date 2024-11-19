@@ -1,6 +1,8 @@
 import React, {useState } from "react";
+
+
 const SignupForm = () =>{
-    const [formData, setFormData] = useState({username:"", password:""});
+    const [formData, setFormData] = useState({username:"", password:"", confirmPassword: ""});
     const [message, setMessage] = useState("");
 
     const handleChange = (e) => {
@@ -20,13 +22,19 @@ const SignupForm = () =>{
                 body: JSON.stringify(formData),
             });
             const data = await response.json();
-            if (response.ok) {
-                setMessage("Signup successful! you can now log in.");
-
-            }
-            else {
-                setMessage(data.message);
-            }
+if (response.ok) {
+    setMessage(
+        <>
+            Sign up successful! You can now{" "}
+            <a href="/login" style={{ color: "blue", textDecoration: "underline" }}>
+                log in
+            </a>
+            .
+        </>
+    );
+} else {
+    setMessage(data.message);
+}
 
             } catch (error) {
                 setMessage("error signing up. please try again.");
@@ -52,6 +60,16 @@ const SignupForm = () =>{
                     <input
                     type="password"
                     name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                    />
+                </div>
+                <div>
+                    <label>confirm Password</label>
+                    <input
+                    type="confirmPassword"
+                    name="confirmPassword"
                     value={formData.password}
                     onChange={handleChange}
                     required
